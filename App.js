@@ -1,41 +1,28 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { StyleSheet, Text, View, Image, FlatList } from "react-native";
-import { Icon } from "react-native-elements";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  FlatList,
+  ScrollView,
+} from "react-native";
 import Header from "./Components/header";
-import Story from "./Components/Story";
+import StoryList from "./Components/StoryList";
+import Post from "./Components/Post";
 
-const data = [
-  {
-    id: 1,
-    name: "John",
-    uri: "https://unsplash.com/photos/ZHvM3XIOHoE",
-  },
-];
-export default function App() {
+export default function App(props) {
   return (
     <View style={styles.container}>
       <Header />
-      <View>
-        <View
-          style={{
-            height: 110,
-            width: "100%",
-            backgroundColor: "#fff",
-            flexDirection: "row",
-            borderBottomColor: "#696969",
-            borderBottomWidth: 0.5,
-            alignItems: "center",
-          }}
-        >
-          <Story />
-          <Story />
-          <Story />
-          <Story />
-          <Story />
-          <Story />
-        </View>
-      </View>
+      <ScrollView showsVerticalScrollIndicator={false}>
+        <StoryList />
+        <Post />
+        <Post />
+        <Post />
+        <Post />
+      </ScrollView>
       <StatusBar style="dark" />
     </View>
   );
