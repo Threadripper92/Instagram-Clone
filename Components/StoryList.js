@@ -1,11 +1,14 @@
 import React from "react";
-import { StyleSheet, Text, View, FlatList } from "react-native";
+import { StyleSheet, Text, View, FlatList, Dimensions } from "react-native";
 import Story from "./Story";
 import StoriesData from "../JSON/StoriesData";
 
+const width = Dimensions.get("screen").width;
+const height = Dimensions.get("screen").height;
+
 const StoryList = () => {
   return (
-    <View>
+    <View style={{ alignItems: "center" }}>
       <View
         style={{
           borderBottomColor: "#B1A9A9",

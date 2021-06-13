@@ -1,6 +1,16 @@
 import React from "react";
-import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  TouchableOpacity,
+  Dimensions,
+} from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
+
+const width = Dimensions.get("screen").width;
+const height = Dimensions.get("screen").height;
 
 const Story = (props) => {
   const { name, image } = props.people;

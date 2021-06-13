@@ -1,10 +1,18 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { StyleSheet, View } from "react-native";
-import Header from "./Components/header";
-import PostList from "./Components/PostList";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  FlatList,
+  ScrollView,
+} from "react-native";
+import Header from "../Components/header";
 
-export default function App() {
+import PostList from "../Components/PostList";
+
+const HomeScreen = () => {
   return (
     <View style={styles.container}>
       <Header />
@@ -16,7 +24,9 @@ export default function App() {
       <StatusBar style="dark" />
     </View>
   );
-}
+};
+
+export default HomeScreen;
 
 const styles = StyleSheet.create({
   container: {

@@ -1,8 +1,19 @@
 import React from "react";
 
-import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  TouchableOpacity,
+  Dimensions,
+} from "react-native";
 
-const Post = () => {
+const width = Dimensions.get("screen").width;
+const height = Dimensions.get("screen").height;
+
+const Post = (props) => {
+  const { avatarImage, avatarName, Post, likedAvatar, PostHeight } = props.post;
   return (
     <View>
       <View
@@ -33,11 +44,11 @@ const Post = () => {
             }}
           >
             <Image
-              source={require("../assets/Avatars/charles-deluvio-kVg2DQTAK7c-unsplash.jpg")}
+              source={avatarImage}
               style={{ height: 30, width: 30, borderRadius: 15 }}
             />
           </View>
-          <Text style={{ margin: 5 }}>Benjamin</Text>
+          <Text style={{ margin: 5 }}>{avatarName}</Text>
         </View>
         <View>
           <Image
@@ -49,15 +60,14 @@ const Post = () => {
       <View
         style={{
           width: "100%",
-          height: 300,
+          height: PostHeight,
           backgroundColor: "#000",
           alignItems: "center",
         }}
       >
-        <Image
-          source={require("../assets/Avatars/charles-deluvio-kVg2DQTAK7c-unsplash.jpg")}
-          style={{ width: "100%", height: "100%" }}
-        />
+        <TouchableOpacity style={{ width: "100%", height: "100%" }}>
+          <Image source={Post} style={{ width: "100%", height: "100%" }} />
+        </TouchableOpacity>
       </View>
       <View
         style={{
@@ -112,7 +122,7 @@ const Post = () => {
           }}
         >
           <Image
-            source={require("../assets/Avatars/minh-pham-5yENNRbbat4-unsplash.jpg")}
+            source={likedAvatar}
             style={{ height: 20, width: 20, borderRadius: 10 }}
           />
           <Text style={{ fontSize: 15, marginLeft: 10 }}>

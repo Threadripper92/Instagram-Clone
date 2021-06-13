@@ -6,22 +6,22 @@ export default [
   },
   {
     id: "2",
-    name: "John",
+    name: "Bacon",
     image: require("../assets/Avatars/michael-dam-mEZ3PoFGs_k-unsplash.jpg"),
   },
   {
     id: "3",
-    name: "Bestine",
+    name: "Jacob",
     image: require("../assets/Avatars/ben-parker-NohB3FJSY90-unsplash.jpg"),
   },
   {
     id: "4",
-    name: "Alvin",
+    name: "Franklin",
     image: require("../assets/Avatars/vicky-hladynets-C8Ta0gwPbQg-unsplash.jpg"),
   },
   {
     id: "5",
-    name: "Puja",
+    name: "Benjamin",
     image: require("../assets/Avatars/charles-deluvio-kVg2DQTAK7c-unsplash.jpg"),
   },
   {
@@ -36,7 +36,7 @@ export default [
   },
   {
     id: "8",
-    name: "John",
-    image: require("../assets/Avatars/vicky-hladynets-C8Ta0gwPbQg-unsplash.jpg"),
+    name: "Sarah",
+    image: require("../assets/Avatars/sarah-brown-tTdC88_6a_I-unsplash.jpg"),
   },
 ];
